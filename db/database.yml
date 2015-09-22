@@ -1,0 +1,5 @@
+development:
+  adapter: postgresql
+  host: ec2-54-243-149-147.compute-1.amazonaws.com
+  username: ttibtgknpmxlsw
+  database: dff0jkvdk9hk28
