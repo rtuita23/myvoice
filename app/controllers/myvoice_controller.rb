@@ -8,6 +8,10 @@ class MyvoiceController < ApplicationController
     @country_uri = JSON.load(open("http://myvoice.simpleweb.co.uk/api/country"))
     @biz_unit_uri = JSON.load(open("http://myvoice.simpleweb.co.uk/api/businessunit"))
     @coe_uri = JSON.load(open("http://myvoice.simpleweb.co.uk/api/coe"))
+		@country = {}
 
-  end
+		@country_uri.each do |hash|
+			@country[hash["name"]] = hash["percent"]
+		end
+	end
 end
