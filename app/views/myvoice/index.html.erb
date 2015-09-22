@@ -1,4 +1,4 @@
-<h1>This is My Voice!</h1>
+<h1>MyVoice Survey Status</h1>
 
 <table>
   <thead>
@@ -18,7 +18,9 @@
       </tr>
     <% end %>
   </tbody>
-  
+</table>
+
+<table>
   <thead>
     <tr>
       <th>Country</th>
@@ -36,5 +38,44 @@
       </tr>
     <% end %>
   </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Business Unit</th>
+      <th>% Complete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
   
+  <tbody>
+    <% @biz_unit_uri.each do |item| %>
+    <% a = item.values %>
+      <tr>
+        <td><%= a[0] %></td>
+        <td><%= a[1] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Center of Excellence</th>
+      <th>% Complete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @coe_uri.each do |item| %>
+    <% a = item.values %>
+      <tr>
+        <td><%= a[0] %></td>
+        <td><%= a[1] %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
