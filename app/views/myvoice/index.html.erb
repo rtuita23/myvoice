@@ -5,11 +5,12 @@
     <tr>
       <th>Region</th>
       <th>% Complete</th>
-      <th colspan="8"></th>
+      <th colspan="15"></th>
     </tr>
   </thead>
 
   <tbody>
+    <% @region_uri = @region_uri.sort_by{|hash| hash["percent"]}.reverse%>
     <% @region_uri.each do |item| %>
     <% a = item.values %>
       <tr>
@@ -25,11 +26,12 @@
     <tr>
       <th>Country</th>
       <th>% Complete</th>
-      <th colspan="8"></th>
+      <th colspan="15"></th>
     </tr>
   </thead>
   
   <tbody>
+    <% @country_uri = @country_uri.sort_by{|hash| hash["percent"]}.reverse%>
     <% @country_uri.each do |item| %>
     <% a = item.values %>
       <tr>
@@ -50,6 +52,7 @@
   </thead>
   
   <tbody>
+    <% @biz_unit_uri = @biz_unit_uri.sort_by{|hash| hash["percent"]}.reverse%>
     <% @biz_unit_uri.each do |item| %>
     <% a = item.values %>
       <tr>
@@ -70,6 +73,7 @@
   </thead>
   
   <tbody>
+    <% @coe_uri = @coe_uri.sort_by{|hash| hash["percent"]}.reverse%>
     <% @coe_uri.each do |item| %>
     <% a = item.values %>
       <tr>
@@ -79,3 +83,4 @@
     <% end %>
   </tbody>
 </table>
+

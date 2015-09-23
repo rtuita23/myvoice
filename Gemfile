@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'sqlite3'
 
+gem 'chartkick'
 # PostgreSQL
 gem 'pg'
 
